@@ -1,12 +1,11 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-zplug "mafredri/zsh-async"
 zplug "marzocchi/zsh-notify"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
-
+zplug "yous/lime"
 
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "

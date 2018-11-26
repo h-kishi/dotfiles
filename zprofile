@@ -12,3 +12,5 @@ SAVEHIST=6000000
 setopt hist_ignore_dups # Ignore duplication command history list
 setopt share_history # share command history data
 autoload history-search-end
+
+export CLICOLOR=1
