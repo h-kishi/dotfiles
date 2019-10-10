@@ -16,6 +16,10 @@ set shiftround
 set expandtab
 set textwidth=80
 set nojoinspaces
+set ignorecase
+set smartcase
+set formatoptions=q
+set hlsearch
 
 syntax on
 
