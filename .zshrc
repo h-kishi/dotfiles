@@ -1,4 +1,4 @@
-export ZPLUG_HOME=/usr/local/opt/zplug
+export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "marzocchi/zsh-notify"
@@ -15,3 +15,7 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
+
+export PATH=/opt/homebrew/bin:/opt/homebrew/sbin::$PATH
+
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

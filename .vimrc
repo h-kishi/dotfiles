@@ -27,3 +27,7 @@ filetype plugin indent on
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
+
+if filereadable($HOME . "/.vimrc.local")
+  source ~/.vimrc.local
+endif
