@@ -1,4 +1,4 @@
-export ZPLUG_HOME=/opt/homebrew/opt/zplug
+export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "marzocchi/zsh-notify"
