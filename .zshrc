@@ -1,20 +1,16 @@
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
+source /opt/homebrew/opt/zinit/zinit.zsh
 
-zplug "marzocchi/zsh-notify"
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "yous/lime"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
-if ! zplug check --verbose; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo; zplug install
-  fi
-fi
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma/fast-syntax-highlighting
+zinit load zdharma/history-search-multi-word
 
-zplug load
+zinit ice from"gh-r" as"program"
+zinit load junegunn/fzf-bin
+
+zinit wait lucid atload"zicompinit; zicdreplay" blockf for zsh-users/zsh-completions
 
 export PATH=/opt/homebrew/bin:/opt/homebrew/sbin::$PATH
 
